@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>pflib.cpp</id>
+    <version>1.0.0.107</version>
+    <title>pflib.cpp</title>
+    <authors>Light</authors>
+    <owners>Light</owners>
+    <description>C++ wrapper for pflib.</description>
+    <summary>C++ wrapper for pflib.</summary>
+    <releaseNotes></releaseNotes>
+    <language>en-US</language>
+    <!--<projectUrl></projectUrl>-->
+    <!--<licenseUrl></licenseUrl>-->
+    <!--<iconUrl></iconUrl>-->
+    <!--<copyright></copyright>-->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <dependencies>
+      <dependency id="pflib" version="2.42.0.0" />
+      <dependency id="more.cpp" version="1.0.0.107" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="include\**\*.hpp" target="build\native\include\" />
+    <file src="pflib.cpp.targets" target="build\native\pflib.cpp.targets" />
+  </files>
+</package>
