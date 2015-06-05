@@ -15,7 +15,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pflib.cpp.test.console", "p
 		{47F411EE-C028-458F-B514-95690009E2B1} = {47F411EE-C028-458F-B514-95690009E2B1}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pflib.cpp.test.unit", "pflib.cpp.test.unit\pflib.cpp.test.unit.vcxproj", "{6E1C582D-F1E8-4B71-8D7E-2649699D7429}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pflib.cpp.test.integration", "pflib.cpp.test.integration\pflib.cpp.test.integration.vcxproj", "{6E1C582D-F1E8-4B71-8D7E-2649699D7429}"
 	ProjectSection(ProjectDependencies) = postProject
 		{47F411EE-C028-458F-B514-95690009E2B1} = {47F411EE-C028-458F-B514-95690009E2B1}
 	EndProjectSection

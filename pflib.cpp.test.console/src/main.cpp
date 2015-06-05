@@ -1,15 +1,26 @@
-// pflib.cpp.test.console.cpp : Defines the entry point for the console application.
-//
-
-#include "stdafx.h"
-
-#include "pfcam.h"
-
+#include <cstdio>
+#include <iostream>
+#include <tchar.h>
+#include "camera.hpp"
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	int port_count;
-	int result = ::pfPortInit(&port_count);
+	auto ports = pf::get_ports();
+
+	std::vector<pf::camera> cameras;
+
+	for (const auto& port : ports)
+	{
+		try
+		{
+			pf::camera camera(port);
+			cameras.push_back(std::move(camera));
+		}
+		catch (const std::exception& ex)
+		{
+			std::cout << ex.what() << " " << port.port() << std::endl;
+		}
+	}
 
 	return 0;
 }

@@ -25,6 +25,7 @@
     <RootNamespace>pflibcpptestunit</RootNamespace>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
+    <ProjectName>pflib.cpp.test.integration</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -73,7 +74,7 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros">
-    <NuGetPackageImportStamp>6c95c16c</NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>e81425f4</NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
@@ -160,7 +161,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\camera.cpp" />
+    <ClCompile Include="src\camera_connected_tests.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -169,7 +170,7 @@
   <ImportGroup Label="ExtensionTargets">
     <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
     <Import Project="..\packages\more.cpp.1.0.0.107\build\native\more.cpp.targets" Condition="Exists('..\packages\more.cpp.1.0.0.107\build\native\more.cpp.targets')" />
-    <Import Project="..\packages\pflib.cpp.1.0.0.107\build\native\pflib.cpp.targets" Condition="Exists('..\packages\pflib.cpp.1.0.0.107\build\native\pflib.cpp.targets')" />
+    <Import Project="..\packages\pflib.cpp.1.0.0.110\build\native\pflib.cpp.targets" Condition="Exists('..\packages\pflib.cpp.1.0.0.110\build\native\pflib.cpp.targets')" />
   </ImportGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
@@ -178,6 +179,6 @@
     <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
     <Error Condition="!Exists('..\packages\pflib.2.42.0.0\build\native\pflib.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\pflib.2.42.0.0\build\native\pflib.props'))" />
     <Error Condition="!Exists('..\packages\more.cpp.1.0.0.107\build\native\more.cpp.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\more.cpp.1.0.0.107\build\native\more.cpp.targets'))" />
-    <Error Condition="!Exists('..\packages\pflib.cpp.1.0.0.107\build\native\pflib.cpp.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\pflib.cpp.1.0.0.107\build\native\pflib.cpp.targets'))" />
+    <Error Condition="!Exists('..\packages\pflib.cpp.1.0.0.110\build\native\pflib.cpp.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\pflib.cpp.1.0.0.110\build\native\pflib.cpp.targets'))" />
   </Target>
 </Project>

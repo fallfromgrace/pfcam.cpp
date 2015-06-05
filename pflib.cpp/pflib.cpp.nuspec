@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>pflib.cpp</id>
-    <version>1.0.0.107</version>
+    <version>1.0.0.110</version>
     <title>pflib.cpp</title>
     <authors>Light</authors>
     <owners>Light</owners>
