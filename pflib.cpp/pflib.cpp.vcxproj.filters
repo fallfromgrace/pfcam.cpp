@@ -18,6 +18,7 @@
     <None Include="pflib.cpp.nuspec" />
     <None Include="pflib.cpp.targets" />
     <None Include="packages.config" />
+    <None Include="update_nuspec.ps1" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\camera.hpp">

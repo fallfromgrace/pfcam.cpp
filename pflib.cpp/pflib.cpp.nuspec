@@ -2,13 +2,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>pflib.cpp</id>
-    <version>1.0.0.110</version>
+    <version>0.1.5638.24970</version>
     <title>pflib.cpp</title>
     <authors>Light</authors>
     <owners>Light</owners>
     <description>C++ wrapper for pflib.</description>
     <summary>C++ wrapper for pflib.</summary>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>
+    </releaseNotes>
     <language>en-US</language>
     <!--<projectUrl></projectUrl>-->
     <!--<licenseUrl></licenseUrl>-->
@@ -17,7 +18,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <dependencies>
       <dependency id="pflib" version="2.42.0.0" />
-      <dependency id="more.cpp" version="1.0.0.107" />
+      <dependency id="more.cpp" version="0.1" />
     </dependencies>
   </metadata>
   <files>

@@ -69,7 +69,7 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros">
-    <NuGetPackageImportStamp>737ff08b</NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>adf814cd</NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
@@ -120,6 +120,9 @@
     <PostBuildEvent>
       <Command>$(SolutionDir).nuget\NuGet.exe pack $(ProjectDir)$(ProjectName).nuspec -IncludeReferencedProjects -OutputDirectory $(SolutionDir)..\..\Packages\NuGet\</Command>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>powershell $(ProjectDir)update_nuspec.ps1 -project $(ProjectName)</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -171,11 +174,12 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="pflib.cpp.targets" />
+    <None Include="update_nuspec.ps1" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
     <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
-    <Import Project="..\packages\more.cpp.1.0.0.107\build\native\more.cpp.targets" Condition="Exists('..\packages\more.cpp.1.0.0.107\build\native\more.cpp.targets')" />
+    <Import Project="..\packages\more.cpp.0.1.5638.24106\build\native\more.cpp.targets" Condition="Exists('..\packages\more.cpp.0.1.5638.24106\build\native\more.cpp.targets')" />
   </ImportGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
@@ -183,6 +187,6 @@
     </PropertyGroup>
     <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
     <Error Condition="!Exists('..\packages\pflib.2.42.0.0\build\native\pflib.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\pflib.2.42.0.0\build\native\pflib.props'))" />
-    <Error Condition="!Exists('..\packages\more.cpp.1.0.0.107\build\native\more.cpp.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\more.cpp.1.0.0.107\build\native\more.cpp.targets'))" />
+    <Error Condition="!Exists('..\packages\more.cpp.0.1.5638.24106\build\native\more.cpp.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\more.cpp.0.1.5638.24106\build\native\more.cpp.targets'))" />
   </Target>
 </Project>
